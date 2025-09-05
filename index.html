@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vector-it</title>
+    <style>
+        /* Базовые стили для всего документа */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #bfc0c7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Основное содержимое */
+        main {
+            flex: 1 0 auto;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Шапка с градиентом */
+        header {
+            background: linear-gradient(135deg, #3f98ca, #6392d4);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Стили для вашего логотипа */
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+        
+        header h1 {
+            margin: 0;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin-left: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #e6e6e6;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .intro, .skills {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .intro {
+            text-align: center;
+        }
+        
+        .intro h2 {
+            color: #4a4a4a;
+            margin-top: 0;
+        }
+        
+        .intro img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .skills h2 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill h3 {
+            color: #3a3d5c;
+            margin-top: 0;
+        }
+        
+        /* Футер с информацией */
+        footer {
+            background: #5a5a5a;
+            color: white;
+            padding: 25px 20px;
+            flex-shrink: 0;
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .footer-left {
+            flex: 2;
+            text-align: left;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .footer-left p {
+            margin: 3px 0;
+            line-height: 1.4;
+        }
+
+        .work-time, .address {
+            margin-top: 15px;
+        }
+
+        .work-time strong, .address strong {
+            color: #e6e6e6;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-right {
+                text-align: left;
+                justify-content: flex-start;
+            }
+            
+            footer {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- ЗДЕСЬ ЗАМЕНИТЕ НА СВОЙ ЛОГОТИП -->
+            <img src="C:\Users\NIKITA\Desktop\Vector\Images\Logo.jpg" alt="Логотип Вектор ИТ" class="logo-img">
+            <h1>Вектор ИТ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="skills">
+            <h2>Наши преимущества</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Расчет финансов</h3>
+                    <p>Наши специалисты рассчитают стоимость работы в кратчайшие сроки.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Индивидуальный предприниматель Иванович Н.Р.</p>
+                <p>УНП 123456789</p>
+                <p>Свидетельство о государственной регистрации выдано Минским горисполкомом 01.01.2023</p>
+                
+                <div class="work-time">
+                    <p><strong>Время работы:</strong></p>
+                    <p>понедельник – пятница с 9.30 до 18.30</p>
+                </div>
+                
+                <div class="address">
+                    <p><strong>Физический адрес:</strong></p>
+                    <p>220112, Республика Беларусь, г. Минск, ул.</p>
+                </div>
+                
+                <div class="address">
+                    <p><strong>Юридический адрес:</strong></p>
+                    <p>220112, Республика Беларусь, г. Минск, ул.</p>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <p>© 2025 "Вектор ИТ". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
